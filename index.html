@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plant a seed of purity and watch it bloom into beauty. A peaceful, interactive experience celebrating kindness and inner strength." />
+  <meta name="theme-color" content="#5fbf82" />
+  
+  <title>Seed of Purity - A Garden of Beautiful Truths</title>
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Seed of Purity" />
+  <meta property="og:description" content="Plant a seed of purity and watch it bloom into beauty." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Crimson+Text:wght@400;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-content">
+      <div class="loading-seed"></div>
+      <p class="loading-text">Preparing the garden...</p>
+    </div>
+  </div>
+
+  <!-- Particle Background -->
+  <div class="particles" id="particles" aria-hidden="true"></div>
+
+  <!-- Main Background -->
+  <div class="background" id="background">
+    
+    <!-- Input Card -->
+    <div class="card" id="card">
+      <div class="card-glow" aria-hidden="true"></div>
+      <h1>If you could plant a seed of absolute purity, what would you name it?</h1>
+      <div class="input-wrapper">
+        <label for="nameInput" class="visually-hidden">Enter your name</label>
+        <input 
+          id="nameInput" 
+          type="text" 
+          placeholder="Your name" 
+          maxlength="20"
+          aria-label="Your name"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <div class="input-underline" aria-hidden="true"></div>
+      </div>
+      <button id="plantBtn" aria-label="Plant your seed">
+        <span>Plant</span>
+        <div class="button-shine" aria-hidden="true"></div>
+      </button>
+    </div>
+
+    <!-- Garden Scene -->
+    <div class="garden hidden" id="garden">
+      
+      <!-- Message Display -->
+      <div class="message-container" role="status" aria-live="polite">
+        <div class="message" id="message"></div>
+      </div>
+      
+      <!-- Instruction Prompt -->
+      <p class="prompt" id="prompt">Touch the petals to see the truth…</p>
+
+      <!-- Ground Line -->
+      <div class="ground" aria-hidden="true"></div>
+      
+      <!-- Seed Animation -->
+      <div class="seed-container" id="seedContainer" aria-hidden="true">
+        <div class="seed" id="seed">
+          <div class="seed-name" id="seedName"></div>
+        </div>
+      </div>
+      
+      <!-- Plant Structure -->
+      <div class="stem-container">
+        <div class="stem" id="stem" aria-hidden="true">
+          
+          <!-- Leaves -->
+          <div class="leaf left" aria-hidden="true">
+            <div class="leaf-vein"></div>
+          </div>
+          <div class="leaf right" aria-hidden="true">
+            <div class="leaf-vein"></div>
+          </div>
+
+          <!-- Flower -->
+          <div class="flower" id="flower" role="group" aria-label="Flower with interactive petals">
+            
+            <!-- Flower Center -->
+            <button class="center" aria-label="Flower center - click 3 times for a secret" tabindex="0">
+              <div class="pollen" aria-hidden="true"></div>
+              <div class="pollen" aria-hidden="true"></div>
+              <div class="pollen" aria-hidden="true"></div>
+            </button>
+
+            <!-- Petals -->
+            <button class="petal" data-i="0" aria-label="Petal 1 - Click to reveal a truth">
+              <div class="petal-highlight" aria-hidden="true"></div>
+            </button>
+            <button class="petal" data-i="1" aria-label="Petal 2 - Click to reveal a truth">
+              <div class="petal-highlight" aria-hidden="true"></div>
+            </button>
+            <button class="petal" data-i="2" aria-label="Petal 3 - Click to reveal a truth">
+              <div class="petal-highlight" aria-hidden="true"></div>
+            </button>
+            <button class="petal" data-i="3" aria-label="Petal 4 - Click to reveal a truth">
+              <div class="petal-highlight" aria-hidden="true"></div>
+            </button>
+            <button class="petal" data-i="4" aria-label="Petal 5 - Click to reveal a truth">
+              <div class="petal-highlight" aria-hidden="true"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Attribution (Hidden but present) -->
+  <div class="attribution visually-hidden">
+    Created with love and care
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
